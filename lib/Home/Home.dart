@@ -20,114 +20,61 @@ class ZeesHome extends StatefulWidget {
   @override
   State<ZeesHome> createState() => _ZeesHomeState();
 }
- int currentIndex = 0;
+
+int currentIndex = 0;
+
 class _ZeesHomeState extends State<ZeesHome> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: DefaultTabController(length: 9,
+      home: DefaultTabController(
+        length: 9,
         child: Scaffold(
           backgroundColor: Colors.black,
-          appBar: AppBar(
+          body: pages[currentIndex],
+          bottomNavigationBar: BottomNavigationBar(
             backgroundColor: Colors.black,
-            leading: GestureDetector(
-              onTap: () {
-                print("Clicked1");
-              },
-              child: Container(
-                decoration: BoxDecoration(shape: BoxShape.circle),
-                child: Image.asset("asset/image/appbar/Zee5-official-logo.jpeg"),
+            currentIndex: currentIndex,
+            unselectedItemColor: Colors.white,
+            type: BottomNavigationBarType.fixed,
+            onTap: (index) {
+              setState(() {
+                currentIndex = index;
+              });
+            },
+            items: [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: 'Home',
               ),
-            ),
-            actions: [
-              Padding(
-                padding: const EdgeInsets.only(right: 20),
-                child: GestureDetector(
-                    onTap: () {
-                      print("Clicked2");
-                    },
-                    child: Icon(
-                      Icons.search,
-                      size: 30,
-                    )),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.upcoming),
+                label: 'Upcoming',
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 15,top: 10),
-                child: GestureDetector(
-                  onTap: () {
-                    print("Clicked3");
-                  },
-                  child: Stack(
-                    children: [
-                      CircleAvatar(
-                        radius: 15,
-                        backgroundImage: AssetImage(
-                          "asset/image/appbar/images.png",
-                        ),
-                      ),
-                      Positioned(
-                        bottom: 10,
-                        right: 1,
-                        child: CircleAvatar(
-                          radius: 7,
-                          backgroundImage: AssetImage(
-                            "asset/image/appbar/download.png",
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.filter_hdr),
+                label: 'Hipi Shorts',
               ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.download_outlined),
+                label: 'Downloads',
+              ),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.queue_music_sharp),
+                  label: 'Music',
+                  backgroundColor: Colors.blue),
             ],
           ),
-          body: pages[currentIndex],
-
-
-          bottomNavigationBar: BottomNavigationBar(
-          backgroundColor:Colors.black,
-          currentIndex: currentIndex,
-          unselectedItemColor: Colors.white,
-          type: BottomNavigationBarType.fixed,
-
-          onTap: (index){
-            setState(() {
-              currentIndex=index;
-            });
-          },
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ), BottomNavigationBarItem(
-              icon: Icon(Icons.upcoming),
-              label: 'Upcoming',
-            ), BottomNavigationBarItem(
-              icon: Icon(Icons.filter_hdr),
-              label: 'Hipi Shorts',
-            ), BottomNavigationBarItem(
-              icon: Icon(Icons.download_outlined),
-              label: 'Downloads',
-            ), BottomNavigationBarItem(
-                icon: Icon(Icons.queue_music_sharp),
-                label: 'Music',
-                backgroundColor: Colors.blue
-            ),
-          ],
-        ),
-
         ),
       ),
     );
   }
-  final pages =[
+
+  final pages = [
     BottomHome(),
     Upcoming(),
     HipiShorts(),
     Downloads(),
     Music(),
-
-
   ];
 }
-
