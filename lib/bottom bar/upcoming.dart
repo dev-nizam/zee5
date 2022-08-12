@@ -29,11 +29,16 @@ class Upcoming extends StatelessWidget {
                       image: DecorationImage(
                           image: AssetImage(Images[index]),
                           fit: BoxFit.fill)),
+                Text("releasing on date",style: TextStyle(color: Colors.white),),
+                Text("Durang|Trailer"),
+                Container(
+                  height: 100,
+                  child: Text("Story: Slow-witted but an eternal optimist, Laal Singh Chaddha (Aamir Khan) stumbles through life, thinking to himself — should you write your own destiny or float freely like a feather going wherever life takes you? Is life a question of choices, matter of chances or the symphony of both? Directed by Advait Chandan, the film is a Hindi adaptation of Robert Zemeckis’ 1994 Oscar winning film ‘Forrest Gump’, starring Tom Hanks."),
+                )
 
 
             );
           },
-
         ),
         ),],
         ),
