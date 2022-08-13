@@ -62,6 +62,7 @@ flutter:
   assets:
      - asset/image/appbar/
      - asset/image/HomeImage/
+     - asset/image/download/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
