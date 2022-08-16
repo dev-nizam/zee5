@@ -43,8 +43,8 @@ class UpPage extends StatelessWidget {
             height: 20,
           ),
           Container(
-            height:170,
-            // MediaQuery.of(context).size.height,
+            // height:170,
+           height:MediaQuery.of(context).size.height,
             child: Text(
               Details,
               style: TextStyle(color: Colors.white),

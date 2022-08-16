@@ -13,6 +13,7 @@ class Downloads extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.black,
             title: const TabBar(
               tabs: [
                 Tab(text: 'Show',),
