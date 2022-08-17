@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 
 class TvShows extends StatelessWidget {
@@ -5,8 +7,15 @@ class TvShows extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.orange,
+    return ListView(
+      children: [
+        Container(
+          height: 200,
+          width: double.infinity,
+          color: Colors.orange,
+
+        ),
+      ],
     );
   }
 }

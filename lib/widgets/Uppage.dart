@@ -14,50 +14,59 @@ class UpPage extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(30),
       height: MediaQuery.of(context).size.height*.7,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            height: 300,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-                image: DecorationImage(
-                    image: AssetImage(Image),
-                    fit: BoxFit.fill)),
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Text(
-            ReleasingDate,
-            style: TextStyle(color: Colors.white),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            type,
-            style: TextStyle(color: Colors.white),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Container(
-            // height:170,
-           height:MediaQuery.of(context).size.height,
-            child: Text(
-              Details,
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 300,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  image: DecorationImage(
+                      image: AssetImage(Image),
+                      fit: BoxFit.fill)),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              ReleasingDate,
               style: TextStyle(color: Colors.white),
             ),
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Text(
-            model,
-            style: TextStyle(color: Colors.grey),
-          ),
-        ],
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              type,
+              style: TextStyle(color: Colors.white),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+             height:66,
+             // height:MediaQuery.of(context).size.height,
+              child: Expanded(
+                child:SizedBox(
+                  height: 100,
+                  child: SingleChildScrollView(scrollDirection: Axis.vertical,
+                    child:
+                  Text(
+                    Details,
+                    style: TextStyle(color: Colors.white),
+                  ),
+              ),
+                ),
+            ),),
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              model,
+              style: TextStyle(color: Colors.grey),
+            ),
+          ],
+        ),
       ),
     );
   }
