@@ -8,6 +8,7 @@ import 'package:zees/tabbarpages/news.dart';
 import 'package:zees/tabbarpages/premium.dart';
 import 'package:zees/tabbarpages/tvshows.dart';
 import 'package:zees/tabbarpages/webseries.dart';
+import 'package:zees/widgets/textfee.dart';
 
 class BottomHome extends StatelessWidget {
   const BottomHome({Key? key}) : super(key: key);
@@ -33,9 +34,14 @@ class BottomHome extends StatelessWidget {
                 onTap: () {
                   print("Clicked2");
                 },
-                child: Icon(
-                  Icons.search,
-                  size: 30,
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (ctx)=>search()));
+                  },
+                  child: Icon(
+                    Icons.search,
+                    size: 30,
+                  ),
                 )),
           ),
           Padding(
