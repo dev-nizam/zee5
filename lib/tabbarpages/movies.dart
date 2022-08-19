@@ -95,41 +95,10 @@ class _MoviesState extends State<Movies> {
                   }).toList(),
                 ),
               ]),
-            ),Padding(
-              padding: const EdgeInsets.all(20),
-              child: Row(
-                children: [
-                  Text("Zee keralam Shows",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16),),
-                  Spacer(),
-                  TextButton(onPressed: (){}, child: Text("More >"))
-                ],
-              ),
-            ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  ShotContainer(img: "asset/image/tvShows/programpic/download.jpg"),
-                  ShotContainer(img: "asset/image/tvShows/programpic/images (1).jpg"),
-                  ShotContainer(img: "asset/image/tvShows/programpic/images (2).jpg"),
-                  ShotContainer(img: "asset/image/tvShows/programpic/images (3).jpg"),
-                  ShotContainer(img: "asset/image/tvShows/programpic/images (4).jpg"),
-                ],
-              ),
-            ),
-            TextCategories(name: "Young Romantics"),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  ShotContainer(img: "asset/image/tvShows/programpic/download.jpg"),
-                  ShotContainer(img: "asset/image/tvShows/programpic/images (1).jpg"),
-                  ShotContainer(img: "asset/image/tvShows/programpic/images (2).jpg"),
-                  ShotContainer(img: "asset/image/tvShows/programpic/images (3).jpg"),
-                  ShotContainer(img: "asset/image/tvShows/programpic/images (4).jpg"),
-                ],
-              ),
-            ),
+            ),TextCategories(name: "Trending near you"),
+            ShotContainer(img: "asset/image/tvShows/programpic/download.jpg"),
+            TextCategories(name: "Top 10 Movies in india"),
+            ShotContainer(img: "asset/image/tvShows/programpic/download.jpg"),
 
           ],
         ),

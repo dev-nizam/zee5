@@ -5,8 +5,18 @@ class HipiShorts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
+    return  Container(
+
+
+      height: MediaQuery.of(context).size.height ,
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(
+
+        image: DecorationImage(
+            image: AssetImage("asset/image/appbar/457769-coming-soon-sign-text-coming-soon-748x499 (1).jpg"),fit:BoxFit.fill
+        ),
+      ),
+
     );
   }
 }

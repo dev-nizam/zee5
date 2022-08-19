@@ -97,34 +97,9 @@ class _HomePageState extends State<HomePage> {
                 ),
               ]),
             ),TextCategories(name: "Trending near you"),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  ShotContainer(img: "asset/image/main/homepage/1.jpg"),
-                  ShotContainer(img: "asset/image/main/homepage/2.jpg"),
-                  ShotContainer(img: "asset/image/main/homepage/3.jpg"),
-                  ShotContainer(img: "asset/image/main/homepage/4.jpg"),
-                  ShotContainer(img: "asset/image/main/homepage/5.jpg"),
-                  ShotContainer(img: "asset/image/main/homepage/6.jpg"),
-                  ShotContainer(img: "asset/image/main/homepage/7.jpg"),
-
-                ],
-              ),
-            ),
+            ShotContainer(img: "asset/image/tvShows/programpic/download.jpg"),
             TextCategories(name: "Top 10 Movies in india"),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  ShotContainer(img: "asset/image/tvShows/programpic/download.jpg"),
-                  ShotContainer(img: "asset/image/tvShows/programpic/images (1).jpg"),
-                  ShotContainer(img: "asset/image/tvShows/programpic/images (2).jpg"),
-                  ShotContainer(img: "asset/image/tvShows/programpic/images (3).jpg"),
-                  ShotContainer(img: "asset/image/tvShows/programpic/images (4).jpg"),
-                ],
-              ),
-            ),
+            ShotContainer(img: "asset/image/tvShows/programpic/download.jpg"),
 
           ],
         ),
